@@ -44,7 +44,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: urlAlterarBeneficiario,
-            method: "DELETE",
+            method: "POST",
             data: {
                 "Id": id
             },
@@ -59,7 +59,6 @@ $(document).ready(function () {
                 function (r) {
                     ModalDialog("Sucesso!", r)
                     $("#formBeneficiario")[0].reset();
-                    $this.closest("tr").remove();
                 }
         })
     })
